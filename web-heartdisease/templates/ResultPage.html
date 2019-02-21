@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Input Form HD</title>
+    
+        <!-- Font Icon -->
+        <link rel="stylesheet" href="../static/fonts/material-icon/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="../static/vendor/nouislider/nouislider.min.css">
+    
+        <!-- Main css -->
+        <link rel="stylesheet" href="../static/css/style.css">
+        <link href="../static/css/agency.css" rel="stylesheet">
+        <link href="../static/css/table.css" rel="stylesheet">
+
+        <!-- Bootstrap core CSS -->
+        <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom fonts for this template -->
+        <link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+        
+    </head>
+    <body class="input">
+            <!-- Navigation -->
+              <!-- Navigation -->
+              <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+                    <div class="container">
+                      <a class="navbar-brand js-scroll-trigger" href="#page-top">AI-Ven</a>
+                      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        Menu
+                        <i class="fas fa-bars"></i>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-navbar text-uppercase ml-auto">
+                          <li class="nav-item ">
+                            <a class="nav-link js-scroll-trigger" href="inputform" style="color:white; font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">Start</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/#about" style="color:white; font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">About</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/#team" style="color:white; font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">Team</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+                <div class="main">
+            
+                    <div class="containerbody">
+                        <div class="signup-content">
+                            <div class="signup-img">
+                                <img src="../static/images/form-img.jpg" alt="">
+                                <div class="signup-img-content">
+                                    <h2>Heart Disease </h2>
+                                    <p> Check Your Heart Disease Here !</p>
+                                </div>
+                            </div>
+                            <div class = "result">
+                                <div>
+                                    <h1>Test hasil diagnosa</h1>
+                                    <div class="dear">
+                                        <p style="color:#212529;">Dear {{result[0]}}</p>
+                                    </div>
+                                </div>
+                                <div class="table-padding">
+                                    <table class="table-fill">
+                                        <thead class = "center">
+                                            <tr>
+                                                <th class="text-left">Age</th>
+                                                <th class="text-left">Sex</th>
+                                                <th class="text-left">Chest Paint</th>
+                                                <th class="text-left">Resting Blood</th>
+                                                <th class="text-left">Cholestrol</th>
+                                                <th class="text-left">Fasting Blood</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-hover">
+                                            <tr>
+                                            {% for val in result[2] %}
+                                                {%for fill in result[2][val]%}
+                                                <td class="text-left">{{fill}}</td>
+                                                {% endfor %}
+                                            {% endfor %}
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class ="table-padding">
+                                    <table class="table-fill">
+                                        <thead class="center">
+                                            <tr>
+                                                <th class="text-left">Resting ECG</th>
+                                                <th class="text-left">Max Heart</th>
+                                                <th class="text-left">Exercise Inc</th>
+                                                <th class="text-left">ST Depression</th>
+                                                <th class="text-left">Peakexer</th>
+                                                <th class="text-left">Number of Major</th>
+                                                <th class="text-left">Thal</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-hover">
+                                            <tr>
+                                            {% for val in result[3] %}
+                                                {%for fill in result[3][val]%}
+                                                <td class="text-left">{{fill}}</td>
+                                                {% endfor %}
+                                            {% endfor %}
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="desk">
+                                    {% if (result[1]!=0) %}
+                                        <p style="color:#212529;">Berdasarkan data-data yang Anda berikan Anda mengidap penyakit jantung kategori {{result[1]}}</p>
+                                    {% else %}
+                                        <p style="color:#212529;">Berdasarkan data-data yang Anda berikan, Anda sehat-sehat saja</p>
+                                    {% endif %}
+                        
+                                    <p style="color:#212529;">Untuk Info lebih lanjut silahkan periksa ke Dokter</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </body>
+</html>
+                        
+
+

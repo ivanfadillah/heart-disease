@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Input Form HD</title>
+    
+        <!-- Font Icon -->
+        <link rel="stylesheet" href="../static/fonts/material-icon/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="../static/vendor/nouislider/nouislider.min.css">
+    
+        <!-- Main css -->
+        <link rel="stylesheet" href="../static/css/style.css">
+         <!-- Bootstrap core CSS -->
+        <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom fonts for this template -->
+        <link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+        <!-- Custom styles for this template -->
+        <link href="../static/css/agency.css" rel="stylesheet">
+   
+   
+    </head>
+<body class="input">
+<!-- Navigation -->
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="#page-top">AI-Ven</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-navbar text-uppercase ml-auto">
+              <li class="nav-item ">
+                <a class="nav-link js-scroll-trigger" href="inputform" style="color:white; font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">Start</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="/#about" style="color:white; font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="/#team" style="color:white; font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">Team</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="main">
+
+        <div class="containerbody">
+            <div class="signup-content">
+                <div class="signup-img">
+                    <img src="../static/images/form-img.jpg" alt="">
+                    <div class="signup-img-content">
+                        <h2>Heart Disease </h2>
+                        <p> Check Your Heart Disease Here !</p>
+                    </div>
+                </div>
+                <div class="signup-form">
+                    <form action = "/result" method="GET" class="register-form" id="register-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <div class="form-input">
+                                    <label for="name" class="required">Name</label>
+                                    <input type="text" name="name" id="name" required />
+                                </div>
+                                <div class="form-input">
+                                    <label for="age" class="required">Age</label>
+                                    <input type="text" name="age" id="age" required/>
+                                </div>
+                                <div class="form-radio">
+                                    <div class="label-flex">
+                                        <label for="sex" class="required">Sex</label>
+                                    </div>
+                                    <div class="form-radio-group">            
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="sex" id="male" value=1 required>
+                                            <label for="male">Male</label>
+                                            <span class="check"></span>
+                                        </div>
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="sex" id="female" value=0 required>
+                                            <label for="female">Female</label>
+                                            <span class="check"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-select">
+                                    <div class="label-flex">
+                                        <label for="chest-paint" class="required">Chest-paint type</label>
+                                    </div>
+                                    <div class="select-list">
+                                        <select name="chest-paint" id="chest-paint" required>
+                                            <option value=1 required>Typical angina</option>
+                                            <option value=2 required>Atypical angina</option>
+                                            <option value=3 required>Non-anginal pain</option> 
+                                            <option value=4 required>Asymptotic</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-input">
+                                    <label for="resting-blood" class="required">Resting blood pressure</label>
+                                    <input type="text" name="resting-blood" id="resting-blood" required />
+                                </div>
+                                <div class="form-input">
+                                    <label for="cholestrol" class="required">Serum cholestrol</label>
+                                    <input type="text" name="cholestrol" id="cholestrol" required />
+                                </div>
+                                <div class="form-input">
+                                    <label for="fastingblood" class="required">Fasting blood sugar</label>
+                                    <input type="text" name="fastingblood" id="fastingblood" required/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-select">
+                                    <div class="label-flex">
+                                        <label for="restingecg" class="required">Resting ECG</label>
+                                    </div>
+                                    <div class="select-list">
+                                        <select name="restingecg" id="restingecg" required>
+                                            <option value=0 required>Normal</option>
+                                            <option value=1 required>Having ST-T wave abnormality</option>
+                                            <option value=2 required>Left ventricular hyperthrophy</option> 
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-input">
+                                    <label for="max-heart" class="required">Max-heart rate achieved</label>
+                                    <input type="text" name="max-heart" id="max-heart" required/>
+                                </div>
+                                <div class="form-radio">
+                                    <div class="label-flex">
+                                        <label for="exerciseInc" class="required">exercise induced angina</label>
+                                    </div>
+                                    <div class="form-radio-group">            
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="exerciseInc" id="exerYes" value=1 required>
+                                            <label for="exerYes" >Yes</label>
+                                            <span class="check"></span>
+                                        </div>
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="exerciseInc" id="exerNo" value=0 required>
+                                            <label for="exerNo" >No</label>
+                                            <span class="check"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-input">
+                                    <label for="stdepression" class="required">ST depression induced by exercise relative to rest</label>
+                                    <input type="text" name="stdepression" id="stdepression" required/>
+                                </div>
+                                <div class="form-radio">
+                                    <div class="label-flex">
+                                        <label for="peakexer" class="required">Peak exercise ST segment</label>
+                                    </div>
+                                    <div class="form-radio-group">            
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="peakexer" id="upsloping" value=1 required>
+                                            <label for="upsloping">Upsloping</label>
+                                            <span class="check"></span>
+                                        </div>
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="peakexer" id="flat" value=2 required>
+                                            <label for="flat">Flat</label>
+                                            <span class="check"></span>
+                                        </div>
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="peakexer" id="downsloping" value=3 required>
+                                            <label for="downsloping">Downsloping</label>
+                                            <span class="check"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-input">
+                                    <label for="numberofmajor" class="required">Number of major vessels (0-3) colored by flourosopy</label>
+                                    <input type="text" name="numberofmajor" id="numberofmajor" required/>
+                                </div>
+                                <div class="form-radio">
+                                    <div class="label-flex">
+                                        <label for="thal" class="required" >thal</label>
+                                    </div>
+                                    <div class="form-radio-group">            
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="thal" id="normal" value=3 required>
+                                            <label for="normal" >Normal</label>
+                                            <span class="check"></span>
+                                        </div>
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="thal" id="fixed" value=6 required>
+                                            <label for="fixed">Fixed detect</label>
+                                            <span class="check"></span>
+                                        </div>
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="thal" id="reversable" value=7 required>
+                                            <label for="reversable">Reversable defect</label>
+                                            <span class="check"></span>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-submit">
+                            <input type="submit" value="Result" class="submit" id="submit" name="submit" /> 
+                            <input type="submit" value="Reset" class="submit" id="reset" name="reset" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/nouislider/nouislider.min.js"></script>
+    <script src="../static/vendor/wnumb/wNumb.js"></script>
+    <script src="../static/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="../static/vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="../static/js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
